@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amritanshu Kumar - Resume</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeIn {
+      animation: fadeIn 0.8s cubic-bezier(.4,0,.2,1) forwards;
+      opacity: 0;
+    }
+    .section-title {
+      background: linear-gradient(45deg, #0070f3, #00f7ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 1rem;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #0070f3;
+    }
+    .portfolio-title {
+      background: linear-gradient(45deg, #00f7ff, #0070f3);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+    }
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    .skill-bar-bg {
+      background: #23395d;
+      border-radius: 9999px;
+      height: 16px;
+      width: 100%;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+    .skill-bar {
+      height: 100%;
+      border-radius: 9999px;
+      background: linear-gradient(90deg, #00f7ff, #0070f3);
+      width: 0;
+      transition: width 1.2s cubic-bezier(.4,0,.2,1);
+    }
+    .project-card {
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card:hover {
+      transform: scale(1.04) translateY(-4px);
+      box-shadow: 0 8px 32px 0 rgba(0,123,255,0.15);
+      z-index: 2;
+    }
+    .cert-tooltip {
+      display: none;
+      position: absolute;
+      left: 110%;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #222e3c;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 0.95rem;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .cert-item:hover .cert-tooltip {
+      display: block;
+    }
+    #backToTop {
+      display: none;
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: linear-gradient(45deg, #00f7ff, #0070f3);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      font-size: 1.5rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+      cursor: pointer;
+      z-index: 100;
+      transition: background 0.2s;
+    }
+    #backToTop:hover {
+      background: linear-gradient(45deg, #0070f3, #00f7ff);
+    }
+  </style>
+</head>
+<body class="bg-[#001133] text-white font-sans">
+  <!-- Header -->
+  <header class="bg-[#0051FF] fixed w-full top-0 left-0 z-50">
+      <div class="nav-container h-16">
+          <h1 class="text-[#00f7ff] text-3xl font-semibold">My Portfolio</h1>
+          <nav>
+              <ul class="flex items-center space-x-8">
+                  <li><a href="index.html" class="text-white hover:opacity-80">About Me</a></li>
+                  <li><a href="resume.html" class="text-white hover:opacity-80">Resume</a></li>
+                  <li><a href="projects.html" class="text-white hover:opacity-80">Projects</a></li>
+                  <li><a href="certifications.html" class="text-white hover:opacity-80">Certifications</a></li>
+                  <li><a href="experience.html" class="text-white hover:opacity-80">Experience</a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-5xl mx-auto px-6 pt-24 pb-16 space-y-16">
+    <!-- Education -->
+    <section id="education" class="bg-gray-800/50 p-6 rounded-lg shadow-xl animate-fadeIn">
+      <h2 class="text-2xl font-bold section-title mb-6">Education</h2>
+      <div class="space-y-6">
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold">B.Tech in Computer Science and Engineering</h3>
+          <p class="text-blue-400">Lovely Professional University, Punjab</p>
+          <p class="text-gray-400">2021 - Present</p>
+        </div>
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold">12th with Mathematics</h3>
+          <p class="text-blue-400">Divine Public School</p>
+          <p class="text-gray-400">Percentage: 70.60% | 2021 - 2022</p>
+        </div>
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold">10th Standard</h3>
+          <p class="text-blue-400">Divine Public School</p>
+          <p class="text-gray-400">Percentage: 85.6% | 2019 - 2020</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section id="skills" class="bg-gray-800/50 p-6 rounded-lg shadow-xl animate-fadeIn">
+      <h2 class="text-2xl font-bold section-title mb-6">Technical Skills</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Languages</h3>
+          <div class="space-y-2">
+            <div class="flex items-center">
+              <span class="text-blue-400 mr-2"><i class="fas fa-code"></i></span>
+              <span>C++</span>
+            </div>
+            <div class="skill-bar-bg"><div class="skill-bar" data-width="85"></div></div>
+            <div class="flex items-center">
+              <span class="text-blue-400 mr-2"><i class="fas fa-code"></i></span>
+              <span>Java</span>
+            </div>
+            <div class="skill-bar-bg"><div class="skill-bar" data-width="80"></div></div>
+            <div class="flex items-center">
+              <span class="text-blue-400 mr-2"><i class="fas fa-code"></i></span>
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-bar-bg"><div class="skill-bar" data-width="75"></div></div>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Technologies/Frameworks</h3>
+          <div class="space-y-2">
+            <div class="flex items-center">
+              <span class="text-blue-400 mr-2"><i class="fas fa-laptop-code"></i></span>
+              <span>React.js</span>
+            </div>
+            <div class="skill-bar-bg"><div class="skill-bar" data-width="80"></div></div>
+            <div class="flex items-center">
+              <span class="text-blue-400 mr-2"><i class="fas fa-laptop-code"></i></span>
+              <span>Node.js</span>
+            </div>
+            <div class="skill-bar-bg"><div class="skill-bar" data-width="70"></div></div>
+            <div class="flex items-center">
+              <span class="text-blue-400 mr-2"><i class="fas fa-laptop-code"></i></span>
+              <span>Git, GitHub, VSCode</span>
+            </div>
+            <div class="skill-bar-bg"><div class="skill-bar" data-width="90"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="bg-gray-800/50 p-6 rounded-lg shadow-xl animate-fadeIn">
+      <h2 class="text-2xl font-bold section-title mb-6">Featured Projects</h2>
+      <div class="space-y-6">
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold">Online Examination System</h3>
+          <p class="text-gray-300 mt-2">
+            • Developed a dynamic online examination system enabling students to take tests, view results, and track performance.<br>
+            • Designed an intuitive user interface with responsive HTML, CSS, and JavaScript for a seamless experience.<br>
+            • Implemented a secure backend using PHP and MySQL to manage user authentication and result processing.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold">Finance Management Website</h3>
+          <p class="text-gray-300 mt-2">
+            • Designed and developed a finance management website enabling users to track expenses and set budgets.<br>
+            • Implemented interactive dashboards with real-time data visualization for monitoring income and expenses.<br>
+            • Enhanced financial awareness and decision-making through comprehensive tracking features.
+          </p>
+        </div>
+        <div class="timeline-item">
+          <h3 class="text-xl font-semibold">Text Formatter</h3>
+          <p class="text-gray-300 mt-2">
+            • Developed a web application allowing users to modify text styles and format content.<br>
+            • Implemented real-time text editing features including case conversion and word count functionality.<br>
+            • Improved user productivity through efficient text transformation tools.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="bg-gray-800/50 p-6 rounded-lg shadow-xl animate-fadeIn">
+      <h2 class="text-2xl font-bold section-title mb-6">Certifications</h2>
+      <div class="space-y-4">
+        <div class="timeline-item cert-item" style="position:relative;">
+          <h3 class="text-xl font-semibold">Cloud Computing Certificate</h3>
+          <p class="text-blue-400">NPTEL</p>
+          <p class="text-gray-400">November 2024</p>
+          <span class="cert-tooltip">Completed NPTEL's Cloud Computing course with hands-on labs and final exam.</span>
+        </div>
+        <div class="timeline-item cert-item" style="position:relative;">
+          <h3 class="text-xl font-semibold">HTML, CSS, JavaScript Web Development</h3>
+          <p class="text-blue-400">Coursera</p>
+          <p class="text-gray-400">April 2024</p>
+          <span class="cert-tooltip">Built several web projects and passed all module quizzes on Coursera.</span>
+        </div>
+        <div class="timeline-item cert-item" style="position:relative;">
+          <h3 class="text-xl font-semibold">Server-side Scripting</h3>
+          <p class="text-blue-400">Coursera</p>
+          <p class="text-gray-400">March 2024</p>
+          <span class="cert-tooltip">Learned backend scripting and implemented server-side logic in projects.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button id="backToTop" title="Back to Top">&#8679;</button>
+
+  <script>
+    // Section reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fadeIn-done');
+          entry.target.classList.remove('animate-fadeIn');
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.animate-fadeIn').forEach(section => {
+      observer.observe(section);
+    });
+
+    // Animate skill bars
+    function animateSkillBars() {
+      document.querySelectorAll('.skill-bar').forEach(bar => {
+        const width = bar.getAttribute('data-width');
+        bar.style.width = width + '%';
+      });
+    }
+    window.addEventListener('scroll', animateSkillBars);
+    window.addEventListener('DOMContentLoaded', animateSkillBars);
+
+    // Smooth scroll for navbar
+    document.querySelectorAll('header nav a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Back to Top button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTop.style.display = 'block';
+      } else {
+        backToTop.style.display = 'none';
+      }
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-10 px-6">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Contact Info -->
+      <div>
+        <h2 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Contact Info</h2>
+        <ul class="space-y-4">
+          <li class="flex items-center">
+            <i class="fas fa-phone text-blue-400 mr-3"></i>
+            <span>+91 7355150038</span>
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-envelope text-blue-400 mr-3"></i>
+            <span>ronikumar2004@gmail.com</span>
+          </li>
+          <li class="flex items-center">
+            <i class="fas fa-map-marker-alt text-blue-400 mr-3"></i>
+            <span>Gorakhpur, Uttar Pradesh</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h2 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Quick Links</h2>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="hover:text-blue-400 transition-colors">About Me</a></li>
+          <li><a href="resume.html" class="hover:text-blue-400 transition-colors">Resume</a></li>
+          <li><a href="projects.html" class="hover:text-blue-400 transition-colors">Projects</a></li>
+          <li><a href="certifications.html" class="hover:text-blue-400 transition-colors">Certificates</a></li>
+          <li><a href="experience.html" class="hover:text-blue-400 transition-colors">Experience</a></li>
+          <li><a href="blog.html" class="hover:text-blue-400 transition-colors">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Links -->
+      <div>
+        <h2 class="text-xl font-semibold mb-4 border-b border-gray-700 pb-2">Connect With Me</h2>
+        <div class="flex space-x-6 mt-4">
+          <a href="https://linkedin.com/in/2004-amritanshu/" target="_blank" class="social-icon hover:text-blue-400 transform hover:scale-110 transition-all">
+            <i class="fab fa-linkedin text-4xl"></i>
+          </a>
+          <a href="https://github.com/Amritanshukumar20/" target="_blank" class="social-icon hover:text-blue-400 transform hover:scale-110 transition-all">
+            <i class="fab fa-github text-4xl"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center text-gray-500 mt-8">
+      &copy; 2025 Amritanshu Kumar. All rights reserved.
+    </div>
+  </footer>
+</body>
+</html>
